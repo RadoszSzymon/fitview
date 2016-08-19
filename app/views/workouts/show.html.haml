@@ -5,6 +5,9 @@
     %p <strong> Pogoda: </strong> #{@training.weather}
     %p <strong> Czas: </strong> #{@training.length} min
     %p <strong> Dystans: </strong> #{@training.distance} km
+    %p <strong> Srednia predkosc: </strong> #{ (@training.distance.to_f/(@training.length.to_f/60)).to_f } km/h
+    
+    
     
 =link_to "Home", root_path |
 =link_to "Edytuj", edit_workout_path(@training)
