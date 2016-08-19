@@ -1,8 +1,10 @@
 .training 
-    %p= @training.date
-    %p= @training.workout
-    %p= @training.mood
-    %p= @training.length
+    %p <strong> Data treningu: </strong> #{@training.date}
+    %p <strong> Rodzaj treningu: </strong> #{@training.workout}
+    %p <strong> Samopoczucie: </strong> #{@training.mood}
+    %p <strong> Pogoda: </strong> #{@training.weather}
+    %p <strong> Czas: </strong> #{@training.length} min
+    %p <strong> Dystans: </strong> #{@training.distance} km
     
 =link_to "Home", root_path |
 =link_to "Edytuj", edit_workout_path(@training)

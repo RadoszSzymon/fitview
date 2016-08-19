@@ -3,3 +3,4 @@
 - @trainings.each do |training|
     %h4= link_to training.date, training
     %h3= training.workout
+    %h3= training.distance.to_s

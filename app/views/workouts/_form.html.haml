@@ -2,6 +2,8 @@
 	= f.input :date, label: "Data"
 	= f.input :workout, label: "Jaką konkurencje trenowałeś?", input_html: { class: "form-control" }
 	= f.input :mood, label: "Jakie jest Twoje samopoczucie?", input_html: { class: "form-control" }
-	= f.input :length, label: "Ile trwał trening?", input_html: { class: "form-control" }
+	= f.input :weather, label: "Pogoda:", input_html: { class: "form-control" }
+	= f.input :length, label: "Czas w minutach:", input_html: { class: "form-control" }
+	= f.input :distance, label: "Dystans w kilometrach:", input_html: { class: "form-control" }
 	%br/
 	= f.button :submit

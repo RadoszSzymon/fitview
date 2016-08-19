@@ -11,13 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160818170128) do
+ActiveRecord::Schema.define(version: 20160819174718) do
 
   create_table "workouts", force: :cascade do |t|
     t.datetime "date"
     t.string   "workout"
     t.string   "mood"
-    t.string   "length"
+    t.string   "weather"
+    t.integer  "length"
+    t.decimal  "distance"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

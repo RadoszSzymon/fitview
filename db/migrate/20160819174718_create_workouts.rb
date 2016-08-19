@@ -4,7 +4,9 @@ class CreateWorkouts < ActiveRecord::Migration
       t.datetime :date
       t.string :workout
       t.string :mood
-      t.string :length
+      t.string :weather
+      t.integer :length
+      t.decimal :distance
 
       t.timestamps null: false
     end
