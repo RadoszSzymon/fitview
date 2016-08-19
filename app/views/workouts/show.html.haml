@@ -1,14 +1,11 @@
 .training 
-    %p <strong> Data treningu: </strong> #{@training.date}
-    %p <strong> Rodzaj treningu: </strong> #{@training.workout}
-    %p <strong> Samopoczucie: </strong> #{@training.mood}
-    %p <strong> Pogoda: </strong> #{@training.weather}
-    %p <strong> Czas: </strong> #{@training.length} min
-    %p <strong> Dystans: </strong> #{@training.distance} km
-    %p <strong> Srednia predkosc: </strong> #{ (@training.distance.to_f/(@training.length.to_f/60)).to_f } km/h
+    %p <strong> Date: </strong> #{ @training.date.strftime("%Y-%m-%d %H:%M") }
+    %p <strong> What training: </strong> #{ @training.workout }
+    %p <strong> Your mood: </strong> #{ @training.mood }
+    %p <strong> Weather: </strong> #{ @training.weather }
+    %p <strong> Time: </strong> #{ @training.length } min
+    %p <strong> Distance: </strong> #{ @training.distance } km
+    %p <strong> Average speed: </strong> #{ (@training.distance.to_f/(@training.length.to_f/60)).to_f } km/h
     
-    
-    
-=link_to "Home", root_path |
-=link_to "Edytuj", edit_workout_path(@training)
+=link_to "Edytuj", edit_workout_path(@training) 
 =link_to "Usun", workout_path(@training), method: :delete, data: { confirm: "Jestes pewien?" }
