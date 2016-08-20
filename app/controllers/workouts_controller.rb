@@ -1,6 +1,6 @@
 class WorkoutsController < ApplicationController
     before_action :find_training, only: [:show, :edit, :update, :destroy]
-    
+    before_action :authenticate_user!, except: [:index, :show]
     
     def index
         @trainings = Workout.all.order("created_at DESC")
@@ -10,11 +10,11 @@ class WorkoutsController < ApplicationController
     end
     
     def new 
-        @training = Workout.new
+        @training = current_user.workouts.build
     end
     
     def create 
-         @training = Workout.new(workout_params)
+         @training = current_user.workouts.build(workout_params)
          if @training.save
              redirect_to @training
          else

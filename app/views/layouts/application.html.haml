@@ -11,7 +11,12 @@
 			.navbar-header
 				= link_to "FitView", root_path, class: "navbar-brand"
 			.nav.navbar-nav.navbar-right
-				= link_to "New Training", new_workout_path, class: "navbar navbar-link"
+				%li= link_to "Sign Up", new_user_registration_path
+				%li= link_to "Sign In", new_user_session_path
+				%li= link_to "Sign Out", destroy_user_session_path, :method => :delete
+				%li= link_to "New Training", new_workout_path
 
 	.container
+		%p.notice= notice
+		%p.alert= alert
 		= yield
