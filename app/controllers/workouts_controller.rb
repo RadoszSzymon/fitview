@@ -6,6 +6,9 @@ class WorkoutsController < ApplicationController
         @trainings = Workout.all.order("created_at DESC")
     end
     
+    def about
+    end
+    
     def show
         if current_user.sex == "Male"
             if @training.intensity == "High"
