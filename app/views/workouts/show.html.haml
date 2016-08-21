@@ -3,6 +3,7 @@
     %p <strong> What training: </strong> #{ @training.workout }
     %p <strong> Your mood: </strong> #{ @training.mood }
     %p <strong> Weather: </strong> #{ @training.weather }
+    %p <strong> Intensity: </strong> #{ @training.intensity } 
     %p <strong> Time: </strong> #{ @training.length } min
     %p <strong> Distance: </strong> #{ @training.distance } km
     %p <strong> Average speed: </strong> #{ (@training.distance.to_f/(@training.length.to_f/60)).to_f } km/h
