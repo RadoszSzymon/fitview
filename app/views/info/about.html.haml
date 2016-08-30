@@ -1,5 +1,6 @@
 %h2 Hello #{ current_user.name} #{ current_user.surname } look at your info
 
+= image_tag current_user.avatar.url(:medium)
 %p Age : #{current_user.age}
 %p Sex : #{current_user.sex}
 %p Weight : #{current_user.weight}
