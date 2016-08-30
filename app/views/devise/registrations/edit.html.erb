@@ -11,6 +11,7 @@
     <%= f.input :weight, required: true %>
     <%= f.input :age, required: true %>
     <%= f.input :activity, label: "Your daily activity. If you only work choose sedentary. If you train for 30-60 easy activity every day choose Low. If you have about 60 min moderate activity choose Medium. If you are more active in your day choose High. :", :collection => ["Sedentary","Low","Medium","High"] %>
+    <%= f.input :goals, required: true, label: "Your diet goals", :collection => ["Lose Weight","Maintain Weight", "Add some weight"] %>
     <%= f.input :sex, required: true, :collection => ["Male","Female"] %>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
