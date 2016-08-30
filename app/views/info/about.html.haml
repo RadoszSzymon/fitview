@@ -4,10 +4,9 @@
 %p Sex : #{current_user.sex}
 %p Weight : #{current_user.weight}
 %p Height : #{current_user.height}
+%p My daily activity : #{ current_user.activity }
 %p BMI : #{ @bmi }
 %p BMR : #{ @bmr } 
 %p All training sessions : #{ current_user.workouts.count }
 %p All distance in trainings : #{ @full_distance } km
 %p All time in trainings : #{ @full_time } min
-%p All calories burned : #{ @full_calories } kcal
-%p All running distance : #{ @running_full_distance } km

@@ -6,12 +6,14 @@ class InfoController < ApplicationController
         
         @full_time = current_user.workouts.inject(0) { |total, training| total + training.length }
         
-        #@full_calories = current_user.workouts.inject(0) { |total, training| total + @calories }
-        
         if current_user.sex == "Male"
             @bmr = (current_user.weight * 10) + (current_user.height * 6.25) - (current_user.age - 5) + 5
         elsif current_user.sex == "Female"
             @bmr = (current_user.weight * 10) + (current_user.height * 6.25) - (current_user.age - 5) - 161
         end
+    end
+
+    def diet
+
     end
 end

@@ -10,6 +10,7 @@
     <%= f.input :height, required: true %>
     <%= f.input :weight, required: true %>
     <%= f.input :age, required: true %>
+    <%= f.input :activity, required: true, label: "Your daily activity. If you only work choose sedentary. If you train for 30-60 easy activity every day choose Low. If you have about 60 min moderate activity choose Medium. If you are more active in your day choose High. :", :collection => ["Sedentary","Low","Medium","High"] %>
     <%= f.input :sex, required: true, :collection => ["Male","Female"] %>
     <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
     <%= f.input :password_confirmation, required: true %>
