@@ -8,6 +8,7 @@
     %p <strong> Distance: </strong> #{ @training.distance } km
     %p <strong> Average speed: </strong> #{ (@training.distance.to_f/(@training.length.to_f/60)).to_f } km/h
     %p <strong> Average amount of burned calories: </strong> #{ @calories } kcal
+    %p <strong> Comment: </strong> #{ @training.comment }
     
 =link_to "Edit", edit_workout_path(@training) 
 =link_to "Delete", workout_path(@training), method: :delete, data: { confirm: "Jestes pewien?" }

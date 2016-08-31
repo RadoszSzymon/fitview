@@ -49,5 +49,15 @@ class InfoController < ApplicationController
                 @diet_calories = ((@bmr * 2.1) + 300).to_i
             end
         end
+
+        if @bmi <= 18.5
+            @bmi_norm = "Underweight"
+        elsif @bmi > 18.5 && @bmi <= 25
+            @bmi_norm = "Normal/Healthy Weight"
+        elsif @bmi > 25 && @bmi <= 30
+            @bmi_norm = "Overweight"
+        elsif @bmi > 30
+            @bmi_norm = "Obese"
+        end
     end
 end
