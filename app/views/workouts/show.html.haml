@@ -1,14 +1,14 @@
 .training 
-    %p <strong> Date: </strong> #{ @training.date.strftime("%Y-%m-%d %H:%M") }
-    %p <strong> What training: </strong> #{ @training.workout }
-    %p <strong> Your mood: </strong> #{ @training.mood }
-    %p <strong> Weather: </strong> #{ @training.weather }
-    %p <strong> Intensity: </strong> #{ @training.intensity } 
-    %p <strong> Time: </strong> #{ @training.length } min
-    %p <strong> Distance: </strong> #{ @training.distance } km
-    %p <strong> Average speed: </strong> #{ (@training.distance.to_f/(@training.length.to_f/60)).to_f } km/h
+    %p <strong> Date: </strong> #{ @workout.date.strftime("%Y-%m-%d %H:%M") }
+    %p <strong> What training: </strong> #{ @workout.workout }
+    %p <strong> Your mood: </strong> #{ @workout.mood }
+    %p <strong> Weather: </strong> #{ @workout.weather }
+    %p <strong> Intensity: </strong> #{ @workout.intensity } 
+    %p <strong> Time: </strong> #{ @workout.length } min
+    %p <strong> Distance: </strong> #{ @workout.distance } km
+    %p <strong> Average speed: </strong> #{ (@workout.distance.to_f/(@workout.length.to_f/60)).to_f } km/h
     %p <strong> Average amount of burned calories: </strong> #{ @calories } kcal
-    %p <strong> Comment: </strong> #{ @training.comment }
+    %p <strong> Comment: </strong> #{ @workout.comment }
     
-=link_to "Edit", edit_workout_path(@training) 
-=link_to "Delete", workout_path(@training), method: :delete, data: { confirm: "Jestes pewien?" }
+=link_to "Edit", edit_workout_path(@workout) 
+=link_to "Delete", workout_path(@workout), method: :delete, data: { confirm: "Jestes pewien?" }
