@@ -1,36 +1,39 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="row edit">
+  <div class="col-sm-6 col-sm-offset-3">
+    <h2>Edit <%= resource_name.to_s.humanize %></h2>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <%= f.error_notification %>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= f.error_notification %>
+      <div class="form-inputs">
+        <%= f.input :name, required: true, autofocus: true %>
+        <%= f.input :surname, required: true %>
+        <%= f.input :email, required: true %>
+        <%= f.input :avatar, as: :file %>
+        <%= f.input :height, required: true %>
+        <%= f.input :weight, required: true %>
+        <%= f.input :age, required: true %>
+        <%= f.input :activity, label: "Your daily activity. If you only work choose sedentary. If you train for 30-60 easy activity every day choose Low. If you have about 60 min moderate activity choose Medium. If you are more active in your day choose High. :", :collection => ["Sedentary","Low","Medium","High"] %>
+        <%= f.input :goals, required: true, label: "Your diet goals", :collection => ["Lose Weight","Maintain Weight", "Add some weight"] %>
+        <%= f.input :sex, required: true, :collection => ["Male","Female"] %>
 
-  <div class="form-inputs">
-    <%= f.input :name, required: true, autofocus: true %>
-    <%= f.input :surname, required: true %>
-    <%= f.input :email, required: true %>
-    <%= f.input :avatar, as: :file %>
-    <%= f.input :height, required: true %>
-    <%= f.input :weight, required: true %>
-    <%= f.input :age, required: true %>
-    <%= f.input :activity, label: "Your daily activity. If you only work choose sedentary. If you train for 30-60 easy activity every day choose Low. If you have about 60 min moderate activity choose Medium. If you are more active in your day choose High. :", :collection => ["Sedentary","Low","Medium","High"] %>
-    <%= f.input :goals, required: true, label: "Your diet goals", :collection => ["Lose Weight","Maintain Weight", "Add some weight"] %>
-    <%= f.input :sex, required: true, :collection => ["Male","Female"] %>
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+        <% end %>
 
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+        <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
+        <%= f.input :password_confirmation, required: false %>
+        <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Update" %>
+      </div>
     <% end %>
 
-    <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
-    <%= f.input :password_confirmation, required: false %>
-    <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
+    <h2>Cancel my account</h2>
+
+    <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class:"btn btn-default" %></p>
   </div>
+</div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Update" %>
-  </div>
-<% end %>
 
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>

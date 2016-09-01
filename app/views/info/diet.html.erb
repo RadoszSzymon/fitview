@@ -1,0 +1,17 @@
+<div class="row diet">
+	<div class="col-sm-12">
+		<h1>Your goal is to "<%= current_user.goals %>"</h1> 
+
+		<h2>You must eat <%= @diet_calories %> kcal, because your daily activity is "<%= current_user.activity %>"</h2> 
+
+		<% if current_user.activity == "High" || current_user.activity == "Medium" %>
+			<h3></h3> In "<%=current_user.activity%>" activity we recoment to eat in diet 60% carbs, 20% protein and 20%fat
+			%h3 In your case, Carbs = <%= (@diet_calories * 0.6).round(1) %> kcal, Protein = <%= (@diet_calories * 0.2).round(1)%> kcal, Fat = <%= (@diet_calories * 0.2).round(1)%> kcal
+		<% elsif current_user.activity == "Low" || current_user.activity == "Sedentary" %>
+			%h3 In "<%=current_user.activity%>" activity we recoment to eat in diet 50% carbs, 25% protein and 25%fat
+			%h3 In your case, Carbs = <%= (@diet_calories * 0.5).round(1) %> kcal, Protein = <%= (@diet_calories * 0.25).round(1)%> kcal, Fat = <%= (@diet_calories * 0.25).round(1)%> kcal
+		<% end %>
+
+		%h3 Your bmi = <%=@bmi%>. Your weight status is "<%=@bmi_norm%>"
+	</div>
+</div>

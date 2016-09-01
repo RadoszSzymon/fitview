@@ -1,0 +1,12 @@
+<%= simple_form_for(@workout, html: { class: 'form-horizontal' }) do |f| %>
+	<%= f.input :date, label: "Date"%>
+	<%= f.input :workout, label: "What training?", :collection => ["Running","Swimming","Cycling"]%>
+	<%= f.input :mood, label: "Your mood", :collection => ["Great","Good","Bad"]%>
+	<%= f.input :weather, label: "Weather:", :collection => ["Sunny","Rainy","Cloudy"] %>
+	<%= f.input :intensity, label: "Intensity. Low is 90-120BPM. Normal is 120-155BPM. High is 155+BPM.", :collection => ["High","Normal","Low"]%>
+	<%= f.input :length, label: "Time in minutes:", input_html: { class: "form-control" }%>
+	<%= f.input :distance, label: "Distance in kilometers:", input_html: { class: "form-control" }%>
+	<%= f.input :comment, label: "Your comment to this training session:", input_html: { class: "form-control" }%>
+	<br>
+	<%= f.button :submit %>
+<% end %>

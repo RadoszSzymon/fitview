@@ -17,3 +17,22 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$white: #ffffff;
+
+.container{
+	.jumbotron{
+		background-color: $white;
+		
+	}
+	.new{
+		h1{
+			padding-bottom: 1em;
+		}
+	}
+	.edit{
+		h2{
+			font-size: 3em;
+			padding:1em 0;
+		}
+	}
+}

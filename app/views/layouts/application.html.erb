@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Workout Log Application</title> 
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+		<%= javascript_include_tag "https://www.google.com/jsapi" %>
+
+		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+		<%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div class="nav navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<%= link_to "FitView", root_path, class: "navbar-brand" %>
+				</div>
+				<div class="nav navbar-nav navbar-right">
+					<% if user_signed_in? %>
+						<li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
+						<li><%= link_to "New Training", new_workout_path %></li>
+						<li><%= link_to "My Info", info_about_path %></li>
+						<li><%= link_to "My Diet Plan", info_diet_path %></li>
+						<li><%= link_to "Update My Info",edit_user_registration_path %></li>
+					<% else %>
+						<li><%= link_to "Sign Up", new_user_registration_path%></li>
+						<li><%= link_to "Sign In", new_user_session_path%></li>
+					<% end %>
+				</div>
+			</div>
+		</div>
+			
+		<div class="container">
+			<% flash.each do |name, msg| %>
+		  		<%= content_tag(:div, msg, class: "alert") %>
+		  	<% end %>
+		  	<div class="jumbotron">
+		  		<%= yield %>
+		  	</div>
+		</div>
+
+	</body>
+</html>
