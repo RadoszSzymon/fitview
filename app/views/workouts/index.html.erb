@@ -1,8 +1,12 @@
 <div class="row">
-	<h1>History</h1>
+	<% if user_signed_in? %>
+		<h1>History</h1>
 
-	<% @workouts.each do |workout| %>
-		<h4><%= link_to workout.date, workout %></h4>
-		<h3><%= workout.workout %></h3>
+		<% @workouts.each do |workout| %>
+			<h4><%= link_to workout.date, workout %></h4>
+			<h3><%= workout.workout %></h3>
+		<% end %>
+	<% else %>
+		<h1>Welcome in FitView</h1>
 	<% end %>
 </div>

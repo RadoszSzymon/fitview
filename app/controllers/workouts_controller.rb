@@ -7,23 +7,23 @@ class WorkoutsController < ApplicationController
     end
     
     def show
-        #if current_user.sex == "Male"
-            #if @workout.intensity == "High"
-            #    @calories = (((current_user.age * 0.2017) - (current_user.weight * 0.09036) + (165 * 0.6309) - 55.0969) * @workout.length / 4.184).round(2)
-           # elsif @workout.intensity == "Normal"
-           #     @calories = (((current_user.age * 0.2017) - (current_user.weight * 0.09036) + (145 * 0.6309) - 55.0969) * @workout.length / 4.184).round(2)
-           # elsif @workout.intensity == "Low"
-           #     @calories = (((current_user.age * 0.2017) - (current_user.weight * 0.09036) + (125 * 0.6309) - 55.0969) * @workout.length / 4.184).round(2) 
-           # end
-        #else
-          #  if @workout.intensity == "High"
-          #      @calories = (((current_user.age * 0.074) - (current_user.weight * 0.05741) + (165 * 0.4472) - 20.4022) * @workout.length / 4.184).round(2)
-          #  elsif @workout.intensity == "Normal"
-          #      @calories = (((current_user.age * 0.074) - (current_user.weight * 0.05741) + (145 * 0.4472) - 20.4022) * @workout.length / 4.184).round(2)
-          #  elsif @workout.intensity == "Low"
-          #      @calories = (((current_user.age * 0.074) - (current_user.weight * 0.05741) + (125 * 0.4472) - 20.4022) * @workout.length / 4.184).round(2)
-          #  end
-       # end
+        if current_user.sex == "Male"
+            if @workout.intensity == "High"
+                @calories = (((current_user.age * 0.2017) - (current_user.weight * 0.09036) + (165 * 0.6309) - 55.0969) * @workout.length / 4.184).round(2)
+            elsif @workout.intensity == "Normal"
+                @calories = (((current_user.age * 0.2017) - (current_user.weight * 0.09036) + (145 * 0.6309) - 55.0969) * @workout.length / 4.184).round(2)
+            elsif @workout.intensity == "Low"
+                @calories = (((current_user.age * 0.2017) - (current_user.weight * 0.09036) + (125 * 0.6309) - 55.0969) * @workout.length / 4.184).round(2) 
+            end
+        else
+            if @workout.intensity == "High"
+                @calories = (((current_user.age * 0.074) - (current_user.weight * 0.05741) + (165 * 0.4472) - 20.4022) * @workout.length / 4.184).round(2)
+            elsif @workout.intensity == "Normal"
+                @calories = (((current_user.age * 0.074) - (current_user.weight * 0.05741) + (145 * 0.4472) - 20.4022) * @workout.length / 4.184).round(2)
+            elsif @workout.intensity == "Low"
+                @calories = (((current_user.age * 0.074) - (current_user.weight * 0.05741) + (125 * 0.4472) - 20.4022) * @workout.length / 4.184).round(2)
+            end
+        end
     end
     
     def new 
