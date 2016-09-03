@@ -1,12 +1,42 @@
-<div class="row">
+<div class="row index">
 	<% if user_signed_in? %>
-		<h1>History</h1>
+		<div class="col-sm-12">
+			<h1>History</h1>
 
-		<% @workouts.each do |workout| %>
-			<h4><%= link_to workout.date, workout %></h4>
-			<h3><%= workout.workout %></h3>
-		<% end %>
+			<% @workouts.each do |workout| %>
+				<h4><%= link_to workout.date, workout %></h4>
+				<h3><%= workout.workout %></h3>
+			<% end %>
+		</div>
 	<% else %>
-		<h1>Welcome in FitView</h1>
+		<div class="col-sm-12">
+
+			<div class="banner">
+					<h1><span>FIT</span> VIEW</h1>
+					<%= link_to "Log In", new_user_session_path, class: "btn btn-default login"%>
+					<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-default signup"%>
+			</div>
+
+			<div class="mission">
+				<h1>FitView Mission</h1>
+				<p>
+					We want help you achieve your fitness goals by adding your training sessions, control your diet and health condition.
+				</p>
+			</div>
+
+			<div class="functions">
+				<h1>What exactly I can do with this app?</h1>
+				<p>
+					Add your training sessions with basic parameters.
+				</p>
+				<p>
+					Calculate your BMI and BMR to control weight.
+				</p>
+				<p>
+					Count your daily calories limit.
+				</p>
+			</div>
+
+		</div>
 	<% end %>
 </div>

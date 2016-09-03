@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Workout Log Application</title> 
+		<title>Workout Log Application</title>
 		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 		<%= javascript_include_tag "https://www.google.com/jsapi" %>
 
 		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 		<%= csrf_meta_tags %>
+
+		<!-- marker google font -->
+		<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 	</head>
 	<body>
 		<div class="nav navbar navbar-default">
@@ -28,7 +31,7 @@
 				</div>
 			</div>
 		</div>
-			
+
 		<div class="container">
 			<% flash.each do |name, msg| %>
 		  		<%= content_tag(:div, msg, class: "alert") %>
