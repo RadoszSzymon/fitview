@@ -23,6 +23,10 @@ $medium_gray: #77817F;
 $dark_gray: #283536;
 $green: #38FF9F;
 
+body{
+  font-family: 'Raleway', sans-serif;
+}
+
 .navbar{
   margin: 0;
   padding: 0 2em;
@@ -37,7 +41,7 @@ $green: #38FF9F;
 
     .index{
       text-align: center;
-      .col-sm-12{
+      .index_not_signed_in{
         padding:0;
         .banner{
           height: 90vh;
@@ -63,7 +67,7 @@ $green: #38FF9F;
             font-size: 2em;
             width: 9em;
             border-radius: 30px;
-            margin-right: .6em;
+            margin-bottom: 1em;
             background: $dark_gray;
             color: $white;
             border: 2px solid $dark_gray;
@@ -75,8 +79,8 @@ $green: #38FF9F;
           .signup{
             font-size: 2em;
             width: 9em;
+            margin-bottom: 1em;
             border-radius: 30px;
-            margin-left: .6em;
             background: $dark_gray;
             color:$white;
             border: 2px solid $dark_gray;
@@ -84,9 +88,81 @@ $green: #38FF9F;
           .signup:hover{
             border: 2px solid $light_gray;
           }
+        }/*banner */
+
+        .mission{
+          padding: 2em 5em 2em 5em;
+          background-color: $dark_gray;
+          color:$white;
+          h1{
+            font-weight: 700;
+            font-size:5em;
+            padding-bottom: .5em;
+          }
+        }/*mission */
+
+        .functions{
+          text-align: left;
+          padding: 2em 5em 2em 5em;
+
+          h1{
+            text-align: center;
+            font-weight: 700;
+            font-size:5em;
+            padding-bottom: .5em;
+          }
+          p{
+            padding:1em 3em;
+          }
+        }/* functions */
+      }
+    }/* index_not_signed_in */
+
+    .index_signed_in{
+      padding: 0;
+
+      h1{
+        margin: 0;
+        font-weight: 700;
+        padding:1.3em 0;
+        background-color: $dark_gray;
+        color: $white;
+      }
+
+      .training_index{
+        padding-top: 3em;
+      }
+    }
+
+    .training{
+      padding:4em 0;
+
+    }/* training */
+
+    .about{
+      padding:3em 0;
+      h2{
+        padding: .5em 0;
+        font-size:3em;
+      }
+      p{
+        span{
+          font-weight: 700;
         }
       }
-    }/* index */
+    }/* about */
+
+    .diet{
+      padding:4em 0;
+
+      h1{
+        padding-bottom: 1em;
+      }
+
+      h2{
+        padding-bottom: 2em;
+      }
+    }/*diet*/
 
 	}/* jumbotron */
 

@@ -1,15 +1,18 @@
 <div class="row index">
 	<% if user_signed_in? %>
-		<div class="col-sm-12">
-			<h1>History</h1>
+		<div class="col-sm-12 index_signed_in">
+			<h1>Training History</h1>
 
 			<% @workouts.each do |workout| %>
-				<h4><%= link_to workout.date, workout %></h4>
-				<h3><%= workout.workout %></h3>
+				<div class="training_index">
+					<h2><%= link_to workout.workout, workout %></h2>
+					<h4><%= link_to workout.date, workout %></h4>
+					<hr>
+				</div>
 			<% end %>
 		</div>
 	<% else %>
-		<div class="col-sm-12">
+		<div class="col-sm-12 index_not_signed_in">
 
 			<div class="banner">
 					<h1><span>FIT</span> VIEW</h1>
@@ -27,12 +30,15 @@
 			<div class="functions">
 				<h1>What exactly I can do with this app?</h1>
 				<p>
+					<%= image_tag("add.png", :alt => "add") %>
 					Add your training sessions with basic parameters.
 				</p>
 				<p>
+					<%= image_tag("calculate.png", :alt => "calculate") %>
 					Calculate your BMI and BMR to control weight.
 				</p>
 				<p>
+					<%= image_tag("count.png", :alt => "count") %>
 					Count your daily calories limit.
 				</p>
 			</div>

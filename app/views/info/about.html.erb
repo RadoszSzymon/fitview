@@ -1,18 +1,18 @@
 <div class="row about">
 	<div class="col-sm-8 col-sm-offset-2">
-		<h2>Hello <%= current_user.name%> <%= current_user.surname %> look at your info</h2> 
-
 		<%= image_tag current_user.avatar.url(:medium) %>
-		<p>Age : <%= current_user.age %> </p>
-		<p> Sex : <%=current_user.sex%></p>
-		<p> Weight : <%=current_user.weight%></p>
-		<p> Height : <%=current_user.height%></p>
-		<p> My daily activity : <%= current_user.activity %></p>
-		<p> My diet goal : <%= current_user.goals %></p>
-		<p> BMI : <%= @bmi %></p>
-		<p> BMR : <%= @bmr %> </p>
-		<p> All training sessions : <%= current_user.workouts.count %></p>
-		<p> All distance in trainings : <%= @full_distance %> km</p>
-		<p> All time in trainings : <%= @full_time %> min</p>
+		<h2>Hello <%= current_user.name%> <%= current_user.surname %> look at your info</h2>
+
+		<p><span>Age :</span> <%= current_user.age %> </p>
+		<p><span> Sex : </span><%=current_user.sex%></p>
+		<p><span> Weight : </span><%=current_user.weight%></p>
+		<p><span> Height : </span><%=current_user.height%></p>
+		<p><span> My daily activity : </span><%= current_user.activity %></p>
+		<p><span> My diet goal : </span><%= current_user.goals %></p>
+		<p><span> BMI : </span><%= @bmi %></p>
+		<p><span> BMR : </span><%= @bmr %> </p>
+		<p><span> All training sessions : </span><%= current_user.workouts.count %></p>
+		<p><span> All distance in trainings : </span><%= @full_distance %> km</p>
+		<p><span> All time in trainings : </span><%= @full_time %> min</p>
 	</div>
 </div>
