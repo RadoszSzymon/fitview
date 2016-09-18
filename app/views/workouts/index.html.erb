@@ -1,6 +1,10 @@
 <div class="row index">
 	<% if user_signed_in? %>
 		<div class="col-sm-12 index_signed_in">
+			<h1>Last 3 weeks distance graph</h1>
+
+			<%= content_tag :div, "", id: "sessions_chart", data: {sessions: sessions_chart_data} %>
+
 			<h1>Training History</h1>
 
 			<% @workouts.each do |workout| %>
