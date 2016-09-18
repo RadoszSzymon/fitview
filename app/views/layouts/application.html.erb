@@ -55,11 +55,46 @@
 		  	</div>
 		</div>
 
+		<!-- js temporary scripts -->
+
 		<script>
 			new Morris.Line({
 			  element: 'sessions_chart',
 			  resize: true,
 			  data: $('#sessions_chart').data('sessions'),
+			  xkey: 'date',
+			  ykeys: ['distance'],
+			  labels: ['Distance']
+			});
+		</script>
+
+		<script>
+			new Morris.Line({
+			  element: 'running_chart',
+			  resize: true,
+			  data: $('#running_chart').data('running'),
+			  xkey: 'date',
+			  ykeys: ['distance'],
+			  labels: ['Distance']
+			});
+		</script>
+
+		<script>
+			new Morris.Line({
+			  element: 'swimming_chart',
+			  resize: true,
+			  data: $('#swimming_chart').data('swimming'),
+			  xkey: 'date',
+			  ykeys: ['distance'],
+			  labels: ['Distance']
+			});
+		</script>
+
+		<script>
+			new Morris.Line({
+			  element: 'cycling_chart',
+			  resize: true,
+			  data: $('#cycling_chart').data('cycling'),
 			  xkey: 'date',
 			  ykeys: ['distance'],
 			  labels: ['Distance']

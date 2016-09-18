@@ -5,6 +5,18 @@
 
 			<%= content_tag :div, "", id: "sessions_chart", data: {sessions: sessions_chart_data} %>
 
+			<h1>Last 3 weeks running graph</h1>
+
+			<%= content_tag :div, "", id: "running_chart", data: {running: running_chart_data} %>
+
+			<h1>Last 3 weeks swimming graph</h1>
+
+			<%= content_tag :div, "", id: "swimming_chart", data: {swimming: swimming_chart_data} %>
+
+			<h1>Last 3 weeks cycling graph</h1>
+
+			<%= content_tag :div, "", id: "cycling_chart", data: {cycling: cycling_chart_data} %>
+
 			<h1>Training History</h1>
 
 			<% @workouts.each do |workout| %>
