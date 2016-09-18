@@ -4,13 +4,8 @@
 
 		<h2>You must eat <%= @diet_calories %> kcal, because your daily activity is "<%= current_user.activity %>"</h2>
 
-		<% if current_user.activity == "High" || current_user.activity == "Medium" %>
-			<h2> In "<%=current_user.activity%>" activity we recoment to eat in diet 60% carbs, 20% protein and 20% fat.
-			 In your case, Carbs = <%= (@diet_calories * 0.6).round(1) %> kcal, Protein = <%= (@diet_calories * 0.2).round(1)%> kcal, Fat = <%= (@diet_calories * 0.2).round(1)%> kcal.</h3>
-		<% elsif current_user.activity == "Low" || current_user.activity == "Sedentary" %>
-			<h2> In "<%=current_user.activity%>" activity we recoment to eat in diet 50% carbs, 25% protein and 25% fat.
-			In your case, Carbs = <%= (@diet_calories * 0.5).round(1) %> kcal, Protein = <%= (@diet_calories * 0.25).round(1)%> kcal, Fat = <%= (@diet_calories * 0.25).round(1)%> kcal.</h3>
-		<% end %>
+		<h2> We recoment to eat in diet 60% carbs, 20% protein and 20% fat.
+		 In your case, Carbs = <%= (@diet_calories * 0.6).round(1) %> kcal, Protein = <%= (@diet_calories * 0.2).round(1)%> kcal, Fat = <%= (@diet_calories * 0.2).round(1)%> kcal.</h3>
 
 		<div id="diet-circle"></div>
 

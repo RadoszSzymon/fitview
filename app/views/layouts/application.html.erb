@@ -58,6 +58,7 @@
 		<script>
 			new Morris.Line({
 			  element: 'sessions_chart',
+			  resize: true,
 			  data: $('#sessions_chart').data('sessions'),
 			  xkey: 'date',
 			  ykeys: ['distance'],
@@ -68,6 +69,7 @@
 		<script>
 			new Morris.Donut({
 			  element: 'diet-circle',
+			  resize: true,
 			  data: [
 			    {label: "Carbs", value: Math.round((<%= @diet_calories %> * 0.6)) },
 			    {label: "Protein", value: Math.round((<%= @diet_calories%> * 0.2)) },
