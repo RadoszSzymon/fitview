@@ -65,5 +65,16 @@
 			});
 		</script>
 
+		<script>
+			new Morris.Donut({
+			  element: 'diet-circle',
+			  data: [
+			    {label: "Carbs", value: Math.round((<%= @diet_calories %> * 0.6)) },
+			    {label: "Protein", value: Math.round((<%= @diet_calories%> * 0.2)) },
+			    {label: "Fat", value: Math.round((<%= @diet_calories %>* 0.2)) }
+			  ]
+			});
+		</script>
+
 	</body>
 </html>

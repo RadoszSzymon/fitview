@@ -12,6 +12,8 @@
 			In your case, Carbs = <%= (@diet_calories * 0.5).round(1) %> kcal, Protein = <%= (@diet_calories * 0.25).round(1)%> kcal, Fat = <%= (@diet_calories * 0.25).round(1)%> kcal.</h3>
 		<% end %>
 
+		<div id="diet-circle"></div>
+
 		<h2> Your bmi = <%=@bmi%>. Your weight status is "<%=@bmi_norm%>".</h2>
 	</div>
 </div>
