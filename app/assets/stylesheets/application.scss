@@ -23,6 +23,8 @@ $light_gray: #C3C3BA;
 $medium_gray: #77817F;
 $dark_gray: #283536;
 $green: #38FF9F;
+$dark_blue: #232940;
+$light_blue: #318aa7;
 
 body{
   font-family: 'Raleway', sans-serif;
@@ -45,8 +47,8 @@ body{
       .index_not_signed_in{
         padding:0;
         .banner{
-          height: 90vh;
-          background: url(image-path('fitview.jpg')) no-repeat center center fixed;
+          height:100vh;
+          background: url(image-path('swim.jpg')) no-repeat center center fixed;
           -webkit-background-size: cover;
           -moz-background-size: cover;
           -o-background-size: cover;
@@ -54,40 +56,40 @@ body{
           padding-top: 10em;
 
           h1{
-            font-size: 8em;
+            font-size: 5.5em;
             margin:0;
             color:$white;
             padding-bottom: .3em;
-            font-family: 'Permanent Marker', cursive;
-            span{
-              color: $green;
-            }
+            font-weight: 700;
           }
 
-          .login{
-            font-size: 2em;
-            width: 9em;
-            border-radius: 30px;
-            margin-bottom: 1em;
-            background: $dark_gray;
+          .login, .signup{
+            margin:1em;
+            width: 24%;
+            border-radius: 0;
+            padding:0.5em;
+            font-size:1.7em;
             color: $white;
-            border: 2px solid $dark_gray;
-          }
-          .login:hover{
-            border: 2px solid $light_gray;
+            border: 3px solid $white;
           }
 
           .signup{
-            font-size: 2em;
-            width: 9em;
-            margin-bottom: 1em;
-            border-radius: 30px;
-            background: $dark_gray;
-            color:$white;
-            border: 2px solid $dark_gray;
+            font-weight: 700;
+            background-color: $dark_blue;
           }
+
           .signup:hover{
-            border: 2px solid $light_gray;
+            color: $light_blue;
+            border:3px solid $light_blue;
+          }
+
+          .login{
+            background-color: $light_blue;
+          }
+
+          .login:hover{
+            color: $dark_blue;
+            border:3px solid $dark_blue;
           }
         }/*banner */
 
