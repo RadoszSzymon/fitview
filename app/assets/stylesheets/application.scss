@@ -93,31 +93,58 @@ body{
           }
         }/*banner */
 
-        .mission{
-          padding: 2em 5em 2em 5em;
-          background-color: $dark_gray;
-          color:$white;
+        .service{
           h1{
+            padding: 0.5em 0;
             font-weight: 700;
-            font-size:5em;
-            padding-bottom: .5em;
           }
-        }/*mission */
 
-        .functions{
-          text-align: left;
-          padding: 2em 5em 2em 5em;
+          .line{
+              ul{
+                padding:0 20em;
+              }
 
-          h1{
-            text-align: center;
-            font-weight: 700;
-            font-size:5em;
-            padding-bottom: .5em;
+              li{
+                font-size: 1.5em;
+              }
+
+              ul li {
+                  position:relative;
+                  margin-bottom: 0;
+                  padding-bottom: 2.5em;
+              }
+
+              ul li:after {
+                  /* bullets */
+                  content: url('bullet.png');
+                  position: absolute;
+                  left: -30px; /*adjust manually*/
+                  top: 0px;
+              }
+
+              ul li:before {
+                  /* lines */
+                  content:"";
+                  position: absolute;
+                  left: -16px; /* adjust manually */
+                  border-left: 1px solid $light_gray;
+                  height: 100%;
+                  width: 1px;
+              }
+
+              ul li:first-child:before {
+                 /* first li's line */
+                 top: 6px; /* moves the line down so that it disappears under the bullet. Adjust manually */
+              }
+
+              ul li:last-child:before {
+                  /* last li's line */
+                 height: 6px; /* shorten the line so it goes only up to the bullet. Is equal to first-child:before's top */
+              }
           }
-          p{
-            padding:1em 3em;
-          }
-        }/* functions */
+        }/*service */
+
+
       }
     }/* index_not_signed_in */
 
