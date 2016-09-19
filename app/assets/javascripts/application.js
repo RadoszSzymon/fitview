@@ -15,5 +15,6 @@
 //= require bootstrap-sprockets
 //= require raphael
 //= require morris
+//= require wow
 //= require turbolinks
 //= require_tree .
