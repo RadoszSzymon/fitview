@@ -30,14 +30,14 @@
 	<% else %>
 		<div class="col-sm-12 index_not_signed_in">
 
-			<div class="banner">
+			<div class="row banner">
 					<h1>START YOUR JOURNEY</h1>
 					<h1>TO HEALTHY LIFE</h1>
 					<%= link_to "SIGN UP FOR FREE", new_user_registration_path, class: "btn btn-default signup"%>
 					<%= link_to "SIGN IN", new_user_session_path, class: "btn btn-default login"%>
 			</div>
 
-			<div class="service">
+			<div class="row service">
 				<h1>How it works?</h1>
 				<div class="line">
 					<ul>
@@ -47,7 +47,18 @@
 						<li class="wow slideInRight" data-wow-duration="1.3s">Analyse session graphs</li>
 						<li class="wow slideInRight" data-wow-duration="1.4s">Be proud of better shape</li>
 					</ul>
+				</div>
+			</div>
 
+			<div class="row newsletter">
+				<h2>Sign Up for newsletter</h2>
+				<div class="newsletter_form">
+					<div class="col-sm-5 col-sm-offset-1">
+						<input type="text" class="form-control" placeholder="Address e-mail" class="newsletter-input">
+					</div>
+					<div class="col-sm-5">
+						<div class="btn btn-default newsletter_button">SEND</div>
+					</div>
 				</div>
 			</div>
 

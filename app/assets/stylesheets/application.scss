@@ -145,7 +145,42 @@ body{
           }
         }/*service */
 
+        .newsletter{
+          background-color: #1c1c1c;
+          padding-bottom: 2em;
 
+          h2{
+            font-size: 700;
+            padding: .8em 0;
+            color: $white;
+          }
+
+          .newsletter_form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .form-control, .btn-default{
+              display: inline-block;
+            }
+
+            .newsletter_button{
+              margin:1em;
+              width: 40%;
+              border-radius: 0;
+              padding:0.5em;
+              font-size:1.7em;
+              color: $white;
+              border: 3px solid $white;
+              background-color: $light_blue;
+            }
+
+            .newsletter_button:hover{
+              color: $dark_blue;
+              border:3px solid $dark_blue;
+            }
+          }
+        }/* newsletter */
       }
     }/* index_not_signed_in */
 
