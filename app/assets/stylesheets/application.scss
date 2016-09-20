@@ -24,7 +24,6 @@ $white: #ffffff;
 $light_gray: #C3C3BA;
 $medium_gray: #77817F;
 $dark_gray: #283536;
-$green: #38FF9F;
 $dark_blue: #232940;
 $light_blue: #318aa7;
 
@@ -184,28 +183,6 @@ body{
             }
           }
         }/* newsletter */
-
-        .footer{
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding: 1em 5em;
-          color: $white;
-          background-color: $dark_blue;
-          p{
-            font-size: 1em;
-          }
-
-          .icon{
-            margin: 0 1em;
-            font-size:1.7em;
-            padding:.5em;
-          }
-
-          .icon:hover{
-            color: $light_blue;
-          }
-        }/* footer */
       }
     }/* index_not_signed_in */
 
@@ -227,7 +204,6 @@ body{
 
     .training{
       padding:4em 0;
-
     }/* training */
 
     .about{
@@ -255,7 +231,33 @@ body{
       }
     }/*diet*/
 
+    .footer{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1em 5em;
+      color: $white;
+      background-color: $dark_blue;
+      p{
+        font-size: 1em;
+      }
+
+      .icon{
+        margin: 0 1em;
+        font-size:1.7em;
+        padding:.5em;
+      }
+
+      .icon:hover{
+        color: $light_blue;
+      }
+    }/* footer */
 	}/* jumbotron */
+
+  .devise{
+    padding:6em 0;
+    min-height: 100vh;
+  }
 
 	.new{
 		h1{
@@ -268,5 +270,4 @@ body{
 			padding:1em 0;
 		}
 	}
-
 }/* container */

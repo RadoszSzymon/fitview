@@ -19,6 +19,7 @@
 		<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
 	</head>
+
 	<body>
 		<% if user_signed_in? %>
 			<nav class="navbar navbar-default">
@@ -48,6 +49,22 @@
 		<div class="container">
 		  	<div class="jumbotron">
 		  		<%= yield %>
+
+					<div class="row footer">
+						<div class="col-sm-9">
+							<h2>FitView</h2>
+							<p>&copy; 2016 FitView, Inc. All rights reserved.</p>
+						</div>
+						<div class="col-sm-1 icon wow slideInRight" data-wow-duration="1s">
+							<%= fa_icon "facebook" %>
+						</div>
+						<div class="col-sm-1 icon wow slideInRight" data-wow-duration="1.1s">
+							<%= fa_icon "twitter" %>
+						</div>
+						<div class="col-sm-1 icon wow slideInRight" data-wow-duration="1.2s">
+							<%= fa_icon "instagram" %>
+						</div>
+					</div>
 		  	</div>
 		</div>
 
@@ -55,45 +72,12 @@
 
 		<script>
 			new Morris.Line({
-			  element: 'sessions_chart',
+			  element: 'distance_chart',
 			  resize: true,
-			  data: $('#sessions_chart').data('sessions'),
+			  data: $('#distance_chart').data('distance'),
 			  xkey: 'date',
-			  ykeys: ['distance'],
-			  labels: ['Distance [km]']
-			});
-		</script>
-
-		<script>
-			new Morris.Line({
-			  element: 'running_chart',
-			  resize: true,
-			  data: $('#running_chart').data('running'),
-			  xkey: 'date',
-			  ykeys: ['distance'],
-			  labels: ['Distance']
-			});
-		</script>
-
-		<script>
-			new Morris.Line({
-			  element: 'swimming_chart',
-			  resize: true,
-			  data: $('#swimming_chart').data('swimming'),
-			  xkey: 'date',
-			  ykeys: ['distance'],
-			  labels: ['Distance']
-			});
-		</script>
-
-		<script>
-			new Morris.Line({
-			  element: 'cycling_chart',
-			  resize: true,
-			  data: $('#cycling_chart').data('cycling'),
-			  xkey: 'date',
-			  ykeys: ['distance'],
-			  labels: ['Distance']
+			  ykeys: ['distance_c', 'distance_r', 'distance_s'],
+			  labels: ['Cycling distance [km]', 'Running distance [km]', 'Swimming distance [km]']
 			});
 		</script>
 
@@ -109,19 +93,10 @@
 			});
 		</script>
 
-		<!-- showing graphs with jquery -->
-		<script>
-			$(document).ready(function(){
-				$('.running_graph_button').click(function(){
-					$('#running_chart').toggle();
-				});
-			});
-		</script>
-
+		<!-- wow.js library -->
 		<script>
 			new WOW().init();
 		</script>
-
 
 	</body>
 </html>
