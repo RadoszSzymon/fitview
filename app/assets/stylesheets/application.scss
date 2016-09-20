@@ -32,8 +32,21 @@ body{
 }
 
 .navbar{
+  background-color: $white;
   margin: 0;
   padding: 0 2em;
+  border:none;
+
+  li.option{
+    a{
+      border-style: solid;
+       border-width: 0 0 4px 0;
+       border-color: #fff;
+    }
+    a:hover{
+      border-color: $dark_gray;
+    }
+  }
 }
 
 .container{
@@ -189,6 +202,10 @@ body{
     .index_signed_in{
       padding: 0;
 
+      #distance_chart{
+        margin:0 1.5em;
+      }
+
       h1{
         margin: 0;
         font-weight: 700;
@@ -198,7 +215,20 @@ body{
       }
 
       .training_index{
-        padding-top: 3em;
+        padding: 2em 0;
+      }
+
+      hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid $light_gray;
+        margin: 0;
+        padding: 0;
+      }
+
+      .training_index:last-child hr{
+        display: none;
       }
     }
 

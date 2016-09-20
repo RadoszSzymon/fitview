@@ -8,11 +8,11 @@
 			<h1>Training History</h1>
 
 			<% @workouts.each do |workout| %>
-				<div class="training_index">
+				<div class="training_index wow slideInUp"  data-wow-duration="0.8s">
 					<h2><%= link_to workout.workout, workout %></h2>
 					<h4><%= link_to workout.date, workout %></h4>
-					<hr>
 				</div>
+				<hr>
 			<% end %>
 		</div>
 	<% else %>
@@ -49,9 +49,6 @@
 					</div>
 				</div>
 			</div>
-
-			
-
 		</div>
 	<% end %>
 </div>
