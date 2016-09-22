@@ -41,6 +41,13 @@ body,html{
   padding: 0 2em;
   border:none;
 
+  .logo{
+    img{
+        padding-top: 0.75em;
+    }
+
+  }
+
   li.option{
     a{
       border-style: solid;
