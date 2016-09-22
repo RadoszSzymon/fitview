@@ -31,6 +31,10 @@ body{
   font-family: 'Raleway', sans-serif;
 }
 
+body,html{
+  width:100%;
+}
+
 .navbar{
   background-color: $white;
   margin: 0;
@@ -51,8 +55,8 @@ body{
 
 .container{
   margin:0;
+  width:100%;
   padding:0;
-  width: 100%;
 	.jumbotron{
 		background-color: $white;
     padding:0;
@@ -237,11 +241,14 @@ body{
     }/* training */
 
     .about{
-
+      max-width: 100%;
+      margin:0;
       .about_header{
         background-color: $dark_gray;
         color: $white;
         text-align: center;
+        height: auto;
+        width:100%;
 
         img{
           width: 200px;
@@ -258,7 +265,7 @@ body{
         }
 
         h2{
-          padding: .5em 0 .5em 2em;
+          padding: .5em 2em;
           font-size:3em;
         }
       }
@@ -301,6 +308,8 @@ body{
     }/*diet*/
 
     .footer{
+      max-width: 100%;
+      margin:0;
       display: flex;
       justify-content: center;
       align-items: center;
