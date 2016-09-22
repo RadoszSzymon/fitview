@@ -19,10 +19,13 @@
 		<div class="col-sm-12 index_not_signed_in">
 
 			<div class="row banner">
-					<h1>START YOUR JOURNEY</h1>
-					<h1>TO HEALTHY LIFE</h1>
-					<%= link_to "SIGN UP FOR FREE", new_user_registration_path, class: "btn btn-default signup"%>
-					<%= link_to "SIGN IN", new_user_session_path, class: "btn btn-default login"%>
+					<h1>START YOUR JOURNEY <br/> TO HEALTHY LIFE</h1>
+					<div class="col-sm-4 col-sm-offset-1 col-xs-8 col-xs-offset-2">
+						<%= link_to "SIGN UP FOR FREE", new_user_registration_path, class: "btn btn-default signup"%>
+					</div>
+					<div class="col-sm-4 col-sm-offset-1 col-xs-8 col-xs-offset-2">
+						<%= link_to "SIGN IN", new_user_session_path, class: "btn btn-default login"%>
+					</div>
 			</div>
 
 			<div class="row service">
@@ -41,10 +44,10 @@
 			<div class="row newsletter">
 				<h2>Sign Up for newsletter</h2>
 				<div class="newsletter_form">
-					<div class="col-sm-5 col-sm-offset-1">
+					<div class="col-sm-5 col-sm-offset-1 col-xs-12">
 						<input type="text" class="form-control" placeholder="Address e-mail" class="newsletter-input">
 					</div>
-					<div class="col-sm-5">
+					<div class="col-sm-5 col-xs-12">
 						<div class="btn btn-default newsletter_button">SEND</div>
 					</div>
 				</div>

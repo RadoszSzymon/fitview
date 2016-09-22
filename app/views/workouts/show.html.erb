@@ -1,18 +1,17 @@
 <div class="row training">
-    <div class="col-sm-6 col-sm-offset-3">
-        <p><strong> Date: </strong> <%= @workout.date.strftime("%Y-%m-%d %H:%M") %></p> 
-        <p> <strong> What training: </strong> <%= @workout.workout %></p> 
-        <p> <strong> Your mood: </strong> <%= @workout.mood %></p> 
-        <p> <strong> Weather: </strong> <%= @workout.weather %></p> 
-        <p> <strong> Intensity: </strong> <%= @workout.intensity %> </p> 
-        <p> <strong> Time: </strong> <%= @workout.length %> min</p> 
-        <p> <strong> Distance: </strong> <%= @workout.distance %> km</p> 
-        <p> <strong> Average speed: </strong> <%= (@workout.distance.to_f/(@workout.length.to_f/60)).to_f.round(3) %> km/h</p> 
-        <p> <strong> Average amount of burned calories: </strong> <%= @calories %> kcal</p> 
-        <p> <strong> Comment: </strong> <%= @workout.comment %></p> 
-        
+    <div class="col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
+        <p><strong> Date: </strong> <%= @workout.date.strftime("%Y-%m-%d %H:%M") %></p>
+        <p> <strong> What training: </strong> <%= @workout.workout %></p>
+        <p> <strong> Your mood: </strong> <%= @workout.mood %></p>
+        <p> <strong> Weather: </strong> <%= @workout.weather %></p>
+        <p> <strong> Intensity: </strong> <%= @workout.intensity %> </p>
+        <p> <strong> Time: </strong> <%= @workout.length %> min</p>
+        <p> <strong> Distance: </strong> <%= @workout.distance %> km</p>
+        <p> <strong> Average speed: </strong> <%= (@workout.distance.to_f/(@workout.length.to_f/60)).to_f.round(3) %> km/h</p>
+        <p> <strong> Average amount of burned calories: </strong> <%= @calories %> kcal</p>
+        <p> <strong> Comment: </strong> <%= @workout.comment %></p>
+
         <%= link_to "Edit", edit_workout_path(@workout), class:"btn btn-default" %>
         <%=link_to "Delete", workout_path(@workout), method: :delete, data: { confirm: "Are you sure?" }, class:"btn btn-default"  %>
     </div>
 </div>
-    

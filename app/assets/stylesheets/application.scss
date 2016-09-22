@@ -64,10 +64,15 @@ body,html{
 
     .index{
       text-align: center;
+      width: 100%;
+      margin:0;
+
       .index_not_signed_in{
         padding:0;
         .banner{
           height:100vh;
+          max-width: 100%;
+          margin:0;
           background: url(image-path('swim.jpg')) no-repeat center center fixed;
           -webkit-background-size: cover;
           -moz-background-size: cover;
@@ -79,13 +84,13 @@ body,html{
             font-size: 5.5em;
             margin:0;
             color:$white;
-            padding-bottom: .3em;
+            padding: 0 .3em .3em .3em;
             font-weight: 700;
           }
 
           .login, .signup{
             margin:1em;
-            width: 24%;
+            width:100%;
             border-radius: 0;
             padding:0.5em;
             font-size:1.7em;
@@ -114,6 +119,8 @@ body,html{
         }/*banner */
 
         .service{
+          max-width: 100%;
+          margin:0;
           h1{
             padding: 0.5em 0;
             font-weight: 700;
@@ -167,6 +174,8 @@ body,html{
         .newsletter{
           background-color: #1c1c1c;
           padding-bottom: 2em;
+          max-width: 100%;
+          margin:0;
 
           h2{
             font-size: 700;
@@ -213,7 +222,7 @@ body,html{
       h1{
         margin: 0;
         font-weight: 700;
-        padding:1.7em 0;
+        padding:1.7em .5em;
         background-color: $dark_gray;
         color: $white;
       }
@@ -239,6 +248,10 @@ body,html{
     .training{
       padding:4em 0;
     }/* training */
+
+    .edit_training{
+      padding: 3em 0;
+    }
 
     .about{
       max-width: 100%;
@@ -301,6 +314,11 @@ body,html{
 
       .diet_details{
         padding: 2em 0;
+
+        #diet-circle{
+          padding: 0 1em;
+        }
+
         h2{
           padding: 1.5em;
         }
@@ -372,3 +390,39 @@ body,html{
     }
 	}
 }/* container */
+
+@media only screen and (max-width: 700px) {
+
+  .container{
+  	.jumbotron{
+      .index{
+        .index_not_signed_in{
+          .banner{
+            padding-top:2em;
+            h1{
+              font-size: 3.7em;
+            }
+          }
+          .service{
+            .line{
+              ul{
+                padding: 0 10em;
+              }
+            }
+          }
+
+          .newsletter{
+            .newsletter_form{
+              display: block;
+
+              input{
+                margin: .3em 3em;
+                width:80%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}/*media queries*/
