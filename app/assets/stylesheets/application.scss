@@ -31,13 +31,16 @@ body{
   font-family: 'Raleway', sans-serif;
 }
 
-body,html{
+body,html, .container, .index, .login, .signup, .about_header{
   width:100%;
+}
+
+.container, .jumbotron, .navbar, .index, .banner, .banner h1, .diet_header h1, .service, .newsletter, .new_header, .index_signed_in h1, .about, .diet_header h1, .footer, .edit_header{
+  margin:0;
 }
 
 .navbar{
   background-color: $white;
-  margin: 0;
   padding: 0 2em;
   border:none;
 
@@ -45,7 +48,6 @@ body,html{
     img{
         padding-top: 0.75em;
     }
-
   }
 
   li.option{
@@ -61,25 +63,17 @@ body,html{
 }
 
 .container{
-  margin:0;
-  width:100%;
   padding:0;
 	.jumbotron{
 		background-color: $white;
     padding:0;
-    margin:0;
-
     .index{
       text-align: center;
-      width: 100%;
-      margin:0;
-
       .index_not_signed_in{
         padding:0;
         .banner{
           height:100vh;
           max-width: 100%;
-          margin:0;
           background: url(image-path('swim.jpg')) no-repeat center center fixed;
           -webkit-background-size: cover;
           -moz-background-size: cover;
@@ -89,7 +83,6 @@ body,html{
 
           h1{
             font-size: 5.5em;
-            margin:0;
             color:$white;
             padding: 0 .3em .3em .3em;
             font-weight: 700;
@@ -97,7 +90,6 @@ body,html{
 
           .login, .signup{
             margin:1em;
-            width:100%;
             border-radius: 0;
             padding:0.5em;
             font-size:1.7em;
@@ -127,7 +119,6 @@ body,html{
 
         .service{
           max-width: 100%;
-          margin:0;
           h1{
             padding: 0.5em 0;
             font-weight: 700;
@@ -182,7 +173,6 @@ body,html{
           background-color: #1c1c1c;
           padding-bottom: 2em;
           max-width: 100%;
-          margin:0;
 
           h2{
             font-size: 700;
@@ -227,7 +217,6 @@ body,html{
       }
 
       h1{
-        margin: 0;
         font-weight: 700;
         padding:1.7em .5em;
         background-color: $dark_gray;
@@ -262,13 +251,11 @@ body,html{
 
     .about{
       max-width: 100%;
-      margin:0;
       .about_header{
         background-color: $dark_gray;
         color: $white;
         text-align: center;
         height: auto;
-        width:100%;
 
         img{
           width: 200px;
@@ -315,7 +302,6 @@ body,html{
         text-align: center;
         h1{
           padding: 1.7em 0;
-          margin: 0;
         }
       }
 
@@ -334,7 +320,6 @@ body,html{
 
     .footer{
       max-width: 100%;
-      margin:0;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -368,7 +353,6 @@ body,html{
       color: $white;
       text-align: center;
       padding: 1.7em 0;
-      margin:0;
 
       h1{
   			padding: 1em;
@@ -385,7 +369,6 @@ body,html{
       color: $white;
       text-align: center;
       padding: 1.7em 0;
-      margin:0;
 
       h1{
   			padding: 1em;
