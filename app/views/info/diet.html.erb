@@ -5,7 +5,9 @@
 	<div class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 diet_details">
 
 		<h2>You should eat <%= @diet_calories %> kcal, because your daily activity is "<%= current_user.activity %>"</h2>
-
+		
+		<div class="diet-line"></div>
+		
 		<h2> We recommend to eat 60% carbs, 20% protein and 20% fat.
 		 In your case, Carbs = <%= (@diet_calories * 0.6).round(1) %> kcal, Protein = <%= (@diet_calories * 0.2).round(1)%> kcal, Fat = <%= (@diet_calories * 0.2).round(1)%> kcal.</h3>
 

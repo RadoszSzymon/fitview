@@ -64,6 +64,9 @@ body,html, .container, .index, .login, .signup, .about_header{
 
 .container{
   padding:0;
+  abbr[title="required"] {
+    display: none;
+  }
 	.jumbotron{
 		background-color: $white;
     padding:0;
@@ -301,12 +304,21 @@ body,html, .container, .index, .login, .signup, .about_header{
         color: $white;
         text-align: center;
         h1{
-          padding: 1.7em 0;
+          padding: 1.7em 1em;
         }
       }
 
       .diet_details{
         padding: 2em 0;
+        
+        .diet-line{
+          border-top: 1px solid $light_gray;
+          width:16%;
+          margin-top: 1em;
+          margin-bottom: 1em;
+          margin-right: 42%;
+          margin-left: 42%;
+        }
 
         #diet-circle{
           padding: 0 1em;
