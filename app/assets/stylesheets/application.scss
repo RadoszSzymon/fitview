@@ -421,4 +421,54 @@ body,html, .container, .index, .login, .signup, .about_header{
       }
     }
   }
-}/*media queries*/
+}
+@media only screen and (max-width: 770px) {
+  .container{
+  	.jumbotron{
+      .index{
+        .index_not_signed_in{
+          .banner{
+            padding-top:5em;
+            
+            .signup, .login{
+              font-size: 1.6em;
+            }
+          }
+        }
+      }
+  	}
+  }
+}
+@media only screen and (max-width: 815px) {
+  .container{
+  	.jumbotron{
+      .index{
+        .index_not_signed_in{
+          .banner{
+            .signup, .login{
+              font-size: 1.5em;
+            }
+          }
+        }
+      }
+  	}
+  }
+}
+@media only screen and (max-width: 369px) {
+  .container{
+  	.jumbotron{
+      .index{
+        .index_not_signed_in{
+          .banner{
+            .signup, .login{
+              font-size: 1.2em;
+            }
+          }
+        }
+      }
+  	}
+  }
+}
+
+
+/*media queries*/
