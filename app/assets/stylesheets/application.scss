@@ -334,6 +334,12 @@ body,html, .container, .index, .login, .signup, .about_header{
         margin: 0 1em;
         font-size:1.7em;
         padding:.5em;
+        .social_link{
+          color: $white;
+        }
+        .social_link:hover, .social_link:active{
+          color: $light_gray;
+        }
       }
 
       .icon:hover{
