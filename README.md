@@ -1,1 +1,14 @@
-FitView is ruby on rails application created to help update your training logs and increase your average fitness level.
+# FitView
+ROR app to manage your activities and diet goals
+
+## Technologies used to build this app
+* Ruby On Rails 4.2.5
+* Bootstrap Sass
+* Morris.js
+* WOW.js
+
+## Author
+* Radosz Szymon
+
+
+
