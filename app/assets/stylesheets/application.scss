@@ -39,6 +39,10 @@ body,html, .container, .index, .login, .signup, .about_header{
   margin:0;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .navbar{
   background-color: $white;
   padding: 0 2em;
@@ -310,7 +314,7 @@ body,html, .container, .index, .login, .signup, .about_header{
 
       .diet_details{
         padding: 2em 0;
-        
+
         .diet-line{
           border-top: 1px solid $light_gray;
           width:16%;
@@ -440,7 +444,7 @@ body,html, .container, .index, .login, .signup, .about_header{
         .index_not_signed_in{
           .banner{
             padding-top:5em;
-            
+
             .signup, .login{
               font-size: 1.6em;
             }
