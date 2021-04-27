@@ -7,11 +7,4 @@ ROR app to manage your activities and diet goals
 * Morris.js
 * WOW.js
 
-## FitView run on Heroku
-https://floating-hamlet-61654.herokuapp.com/
-
-## Author
-* Radosz Szymon
-
-
 
